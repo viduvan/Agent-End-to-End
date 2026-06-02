@@ -35,7 +35,7 @@ Examples:
 | màn hình, component, responsive, UI, giao diện | `frontend_ui` | Medium |
 | test, testing, coverage, QA, viết test | `testing` | Medium |
 | docs, tài liệu, README, API docs | `documentation` | Medium |
-| bắt đầu, init, bootstrap, project mới | `new-project` | High |
+| bắt đầu, init, bootstrap, project mới | `new_project` | High |
 | research, spike, thử nghiệm, poc, evaluate | `research_spike` | Medium |
 | *(không match pattern nào)* | `unknown` | Low |
 
