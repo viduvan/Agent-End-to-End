@@ -1,0 +1,43 @@
+# .ckignore — Directories blocked by scout-block hook
+# Patterns follow gitignore syntax
+
+# Node.js
+node_modules/
+.npm/
+
+# Build outputs
+dist/
+build/
+.next/
+.nuxt/
+.output/
+out/
+
+# Python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+.tox/
+htmlcov/
+
+# Coverage
+.coverage
+coverage/
+
+# Docker
+.docker/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

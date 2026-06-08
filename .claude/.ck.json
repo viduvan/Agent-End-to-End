@@ -1,0 +1,12 @@
+{
+  "privacyBlock": true,
+  "scoutBlock": true,
+  "simplifyGate": true,
+  "descriptiveName": true,
+  "sessionInit": true,
+  "diffThreshold": 300,
+  "locale": "vi-VN",
+  "plan": {
+    "namingFormat": "YYYY-MM-DD-feature-name"
+  }
+}
