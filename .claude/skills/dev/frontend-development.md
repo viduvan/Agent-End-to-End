@@ -56,3 +56,25 @@ Extract data fetching thành custom hooks:
 - Component ≤ 200 dòng
 - Logic trong hooks, không trong component
 - Loading + error states bắt buộc
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Works on Chrome đủ rồi" | Cross-browser testing bắt buộc. Safari/Firefox behave differently. |
+| "Mobile responsive sau" | Mobile-first design. Responsive sau = expensive rework. |
+| "Accessibility optional" | Accessibility = legal requirement in many markets. Build in, not bolt on. |
+
+## Red Flags
+- No cross-browser testing
+- Not responsive (desktop only)
+- Missing loading/error states
+- No keyboard navigation support
+- Bundle size not monitored
+
+## Verification
+- [ ] Cross-browser tested (Chrome, Firefox, Safari)
+- [ ] Responsive design (mobile-first)
+- [ ] Loading/error/empty states handled
+- [ ] Accessible (keyboard nav, ARIA labels)
+- [ ] Bundle size within budget
