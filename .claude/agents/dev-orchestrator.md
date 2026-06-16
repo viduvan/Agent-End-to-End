@@ -37,6 +37,13 @@ Examples:
 | docs, tài liệu, README, API docs | `documentation` | Medium |
 | bắt đầu, init, bootstrap, project mới | `new_project` | High |
 | research, spike, thử nghiệm, poc, evaluate | `research_spike` | Medium |
+| doubt, verify, adversarial, fresh review | `doubt_review` | Medium |
+| docs check, verify API, official docs, check docs | `source_verify` | Medium |
+| security, OWASP, threat model, hardening, bảo mật | `security_audit` | High |
+| simplify, refactor clarity, clean code, đơn giản hóa | `simplification` | Medium |
+| ADR, decision record, why this choice, ghi quyết định | `architecture_decision` | Medium |
+| logging, metrics, tracing, observability, monitoring | `observability` | Medium |
+| git workflow, commit discipline, worktree | `git_management` | Medium |
 | *(không match pattern nào)* | `unknown` | Low |
 
 ### Bước 2: Chọn Workflow
@@ -62,6 +69,7 @@ Load skill bundle tương ứng (đọc file `.claude/skills/dev/skill-bundles.m
 - Fallback: hỏi user tối đa 1-3 câu khi intent không rõ (confidence < Medium)
 - Smart sizing: task nhỏ → làm luôn; task lớn → plan trước
 - Safety: KHÔNG overwrite/can thiệp project khi chưa rõ scope
+- Auto-inject: tuân thủ `auto-inject-rules.md` — inject source-check/secure/doubt tự động khi detect conditions
 
 ## Đầu ra
 Với mỗi request, orchestrator output:
