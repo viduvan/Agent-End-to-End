@@ -77,3 +77,39 @@ Viết regression test cho bug #245:
 - Mock ở boundary (DB, external API), không mock internal
 - Test name mô tả scenario: `test_should_return_404_when_agent_not_found`
 - Chạy full suite sau mỗi craft — không chỉ test mới
+
+## Test Pyramid (từ agent-skills)
+
+| Level | Tỷ lệ | Tốc độ | Scope |
+|-------|--------|--------|-------|
+| Unit tests | 70% | Fast (ms) | 1 function/class |
+| Integration tests | 20% | Medium (s) | Module boundaries |
+| E2E tests | 10% | Slow (min) | Full user flow |
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Tests chậm CI nên skip" | CI chậm = fix CI, không skip tests. Optimize test suite, không bỏ. |
+| "Happy path đủ rồi" | Bug production 80% ở edge cases. Test error paths + boundary values. |
+| "Mocking quá nhiều thì test vô nghĩa" | Mock ở boundary (DB, external API). Không mock internal logic. |
+| "Code đơn giản không cần test" | "Đơn giản" trở thành "phức tạp" sau 3 lần sửa. Test giữ behavior đúng. |
+| "Test sau khi feature ổn định" | Feature không bao giờ "ổn định". Test giữ feature ổn định. |
+
+## Red Flags
+- Test kiểm tra implementation detail thay vì behavior
+- Test không có Arrange/Act/Assert rõ ràng
+- Test name không mô tả scenario
+- Chỉ test happy path, bỏ error paths
+- Mock internal functions (chỉ mock boundaries)
+- Coverage < 70% cho code mới
+- Flaky tests bị ignore thay vì fix
+
+## Verification
+Sau khi test xong:
+- [ ] Coverage ≥ target (70% overall, 85% feature mới, 100% critical path)
+- [ ] Test pyramid balance (70% unit, 20% integration, 10% e2e)
+- [ ] Edge cases covered (null, empty, boundary, error)
+- [ ] Regression tests cho mọi bug fix
+- [ ] Test chạy < 5 phút cho unit suite
+- [ ] Không có flaky tests (fix hoặc quarantine)
