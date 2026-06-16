@@ -23,9 +23,63 @@ Use this agent when code needs to be reviewed for quality, security, and adheren
 - Naming convention enforcement
 - Secret/config hardcode detection
 
+## Review Framework (5-Axis) — từ agent-skills
+
+### 1. Correctness — Code làm đúng việc?
+- Edge cases handled (null, empty, boundary, concurrent)?
+- Error paths handled (timeout, network failure, invalid data)?
+- Tests thực sự test đúng behavior (không test implementation detail)?
+- Race conditions, off-by-one errors, state inconsistencies?
+
+### 2. Readability — Người khác hiểu không cần giải thích?
+- Tên descriptive và consistent với project conventions?
+- Control flow straightforward (no deeply nested logic)?
+- Code well-organized (related code grouped, clear boundaries)?
+- Dead code, unused variables, commented-out code?
+
+### 3. Architecture — Phù hợp thiết kế hệ thống?
+- Follow existing patterns? Nếu pattern mới → justified + documented?
+- Module boundaries maintained? Circular dependencies?
+- Dependencies flow đúng hướng?
+- Abstraction level phù hợp (không over-engineer, không over-couple)?
+
+### 4. Security — Có lỗ hổng?
+- Input validated at system boundaries?
+- Secrets safe (env vars, not code)?
+- SQL parameterized? HTML output encoded?
+- Auth/authz checked? External data treated as untrusted?
+
+### 5. Performance — Có bottleneck?
+- N+1 query patterns?
+- Unbounded loops hoặc unconstrained data fetching?
+- Sync operations nên là async?
+- Missing pagination on list endpoints?
+
+## Change Sizing
+| Size | LOC | Quality |
+|------|-----|---------|
+| ~100 | Good | Easy to review |
+| ~300 | Acceptable | One focused concern |
+| ~1000 | Split it | Too much for single review |
+
+## Dead Code Hygiene
+Sau mọi refactoring: list orphaned code → ask author before delete.
+Commented-out code = dead code. Delete, dùng git history nếu cần khôi phục.
+
+## Severity Labels
+
+| Prefix | Meaning | Action |
+|--------|---------|--------|
+| *(none)* | Required | Must fix before merge |
+| **Critical:** | Blocks merge | Security/data loss/broken |
+| **Nit:** | Minor | Author may ignore |
+| **Optional:** | Suggestion | Worth considering |
+| **FYI** | Info only | No action needed |
+
 ## Đầu ra
-- Review comments (Critical / Major / Minor / Nit)
+- Review comments (theo Severity Labels)
 - Approve / Request Changes decision
+- "What's Done Well" section (ít nhất 1 positive observation)
 
 ## Skill nội tại
 - `/fis:Glob`
