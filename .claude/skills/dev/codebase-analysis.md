@@ -47,3 +47,20 @@ Researcher (Technical Analyst)
 - Multi-source research (docs, GitHub, Stack Overflow)
 - Comparison matrix (options, pros/cons)
 - Summary report with recommendations
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Đọc code đủ, không cần tool" | Large codebase > human capacity. Tools = comprehensive coverage. |
+| "Repomix chỉ cho AI, tôi không cần" | Repomix output = searchable context. Hữu ích cho humans too. |
+
+## Red Flags
+- Analysis without structured output
+- Missing dependency graph
+- Not identifying dead code
+
+## Verification
+- [ ] Codebase structure mapped
+- [ ] Dependencies identified
+- [ ] Dead code flagged
