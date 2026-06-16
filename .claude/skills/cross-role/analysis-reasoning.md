@@ -89,3 +89,23 @@ Lặp lại cycle improve until quality target met.
 - Quality gate after each iteration
 - Stop condition: target met or max iterations
 - Progress tracking per iteration
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Intuition đủ cho quyết định này" | Intuition = bias. Step-by-step reasoning catches what intuition misses. |
+| "Quá chậm, decide nhanh đi" | Fast decision × wrong = expensive rework. 10 phút reasoning saves hours. |
+| "Vấn đề đơn giản, không cần steps" | "Đơn giản" problems have hidden complexity. Steps expose assumptions. |
+
+## Red Flags
+- Conclusion reached without showing reasoning steps
+- Assumptions not stated explicitly
+- Alternative solutions not considered
+- Reasoning jumps from problem to solution (skip analysis)
+
+## Verification
+- [ ] Reasoning steps documented
+- [ ] Assumptions explicit
+- [ ] ≥ 2 alternatives considered
+- [ ] Conclusion follows from steps (traceable)
