@@ -32,3 +32,23 @@ Decision table:
 
 ## Output
 - `artifacts/sod/SOD-NNNN.md` — BPMN + Mermaid sequence diagrams
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Flow đơn giản, không cần diagram" | Flow "đơn giản" cho BA ≠ đơn giản cho DEV/QA. Diagram = shared understanding. |
+| "BPMN quá formal" | BPMN = universal process notation. Swimlane nếu BPMN overkill. |
+| "Decision table chỉ cần cho complex rules" | Mọi if/else business rule nên có decision table. Completeness check. |
+
+## Red Flags
+- Process flow không có exception/error paths
+- Swimlane thiếu actors (ai responsible cho step nào?)
+- Decision table không exhaustive (missing combinations)
+- Diagram không match với PRD/FSD description
+
+## Verification
+- [ ] Process flow includes happy path + exception paths
+- [ ] Swimlane: every step has clear actor/responsibility
+- [ ] Decision tables exhaustive (all combinations covered)
+- [ ] Diagram consistent với PRD/FSD
