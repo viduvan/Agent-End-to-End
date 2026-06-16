@@ -107,3 +107,23 @@ Generate Excalidraw-style hand-drawn diagrams.
 - Whiteboard-style brainstorming
 - Export to .excalidraw.json
 - Embeddable in markdown
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Code tự document" | Code nói WHAT. Docs nói WHY + HOW TO USE + ARCHITECTURE. |
+| "Docs viết sau khi stable" | "Stable" = never. Write docs as you go. |
+| "README đủ rồi" | README = entry point. Architecture, API, ADR docs cũng cần. |
+
+## Red Flags
+- Docs outdated (not matching current code)
+- No architecture documentation
+- API docs incomplete or auto-generated without review
+- Onboarding docs missing (new team member cannot self-serve)
+
+## Verification
+- [ ] Docs match current code/behavior
+- [ ] Architecture documented (C4 or equivalent)
+- [ ] API docs complete và reviewed
+- [ ] Onboarding path clear (README → setup → contribute)
