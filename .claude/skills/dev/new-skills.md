@@ -55,3 +55,20 @@ Extract, compare, port, or adapt a feature from a GitHub repository or local rep
 ```
 /fis:xia "<input>"
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Quick implementation, structure later" | Structure = quality. Later = tech debt. Build structured from start. |
+| "Cook pipeline overkill cho simple task" | Pipeline ensures completeness. Simple task = simple pipeline, not no pipeline. |
+
+## Red Flags
+- Implementation without clear phases
+- No tests between implementation steps
+- Skip verification steps
+
+## Verification
+- [ ] Implementation phases defined
+- [ ] Tests after each phase
+- [ ] Verification checklist completed
