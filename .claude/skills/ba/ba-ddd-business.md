@@ -29,3 +29,23 @@ Output: context map + aggregate diagram + event catalog.
   - §II: Bounded Contexts + Mockup
   - §III: Aggregates + Entities
   - §IV: Domain Events + Policies
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Domain model quá complex cho dự án nhỏ" | Dự án "nhỏ" lớn dần. Domain model sớm = less refactoring sau. |
+| "Team hiểu domain, không cần ubiquitous language" | Team hiện tại hiểu. Team member mới 3 tháng sau không. Document. |
+| "Bounded context split later" | Later = never. Monolith → microservice migration cực kỳ tốn kém. |
+
+## Red Flags
+- Bounded contexts quá lớn (god context)
+- Ubiquitous language không consistent giữa code và docs
+- Domain events không cover all state transitions
+- Missing aggregate invariants
+
+## Verification
+- [ ] Bounded contexts defined với clear boundaries
+- [ ] Ubiquitous language documented và consistent
+- [ ] Domain events cover tất cả state transitions
+- [ ] Aggregate invariants defined
