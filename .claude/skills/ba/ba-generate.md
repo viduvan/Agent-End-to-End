@@ -19,3 +19,23 @@ Sinh:
 
 ## Output
 - `artifacts/prd/PRD-NNNN.md` (reverse-engineered từ code)
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Code nói lên tất cả, docs thừa" | Code nói WHAT. PRD nói WHY + WHO + WHEN. Cả hai cần thiết. |
+| "Reverse-engineer nhanh thôi" | Brownfield PRD cần verify với stakeholder. Code ≠ intended behavior. |
+| "Code stable rồi, không cần spec" | Team member mới cần context. Spec = onboarding accelerator. |
+
+## Red Flags
+- Generated PRD không verified với stakeholder
+- Missing business context (WHY behind the code)
+- Chỉ list features mà không có user stories / jobs
+- Không cross-reference với existing docs
+
+## Verification
+- [ ] Generated PRD verified với stakeholder
+- [ ] Business context (WHY) captured, not just WHAT
+- [ ] User stories / JTBD included
+- [ ] Gaps between code and intended behavior identified
