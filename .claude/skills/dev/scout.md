@@ -73,3 +73,27 @@ Liệt kê method public chưa có test.
 - Scout TRƯỚC Craft — reuse > build mới
 - Scout TRƯỚC Refactor — biết impact trước khi sửa
 - Block: `.next`, `node_modules`, `dist`, `__pycache__` khi scout
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Tôi đã biết codebase rồi, skip scout" | Codebase thay đổi liên tục. Scout mỗi lần phát hiện code mới, dependency mới, pattern thay đổi. |
+| "Scout mất thời gian, craft luôn cho nhanh" | Craft không scout = build lại thứ đã có. 10 phút scout tiết kiệm 2 giờ duplicate code. |
+| "Chỉ cần grep là đủ" | Grep tìm text, scout tìm patterns + relationships + anti-patterns. Khác nhau bản chất. |
+| "Module này isolated, không cần scan dependencies" | Không có module nào thực sự isolated. Luôn check imports/exports chain. |
+
+## Red Flags
+- Craft mà không scout trước (vi phạm nguyên tắc "Scout TRƯỚC Craft")
+- Scout chỉ scan 1 folder mà bỏ qua dependencies
+- Không liệt kê reuse candidates
+- Scout kết quả nhưng không có impact analysis
+- Skip scout vì "đã làm lần trước" (codebase đã thay đổi)
+
+## Verification
+Sau khi scout xong, xác nhận:
+- [ ] Đã scan tất cả modules liên quan (không chỉ target module)
+- [ ] Liệt kê services/patterns có thể reuse
+- [ ] Liệt kê anti-patterns/tech debt phát hiện
+- [ ] Impact analysis nếu chuẩn bị modify
+- [ ] Block paths đã được exclude (node_modules, dist, .next)
