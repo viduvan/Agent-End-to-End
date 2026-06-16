@@ -89,3 +89,24 @@ Implement repository pattern:
 - Response envelope thống nhất
 - Idempotency key cho mutation
 - OpenAPI auto-gen từ Pydantic schema
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "API hoạt động, validation sau" | Invalid input → 500 error → production incident. Validate at boundary. |
+| "Error handling verbose quá" | Explicit error handling > implicit crash. Users need meaningful errors. |
+| "REST endpoint đơn giản, không cần docs" | Undocumented API = tribal knowledge. OpenAPI spec bắt buộc. |
+
+## Red Flags
+- API endpoints without input validation
+- Generic error responses (500 for everything)
+- No OpenAPI/Swagger documentation
+- Missing pagination on list endpoints
+- SQL queries without parameterization
+
+## Verification
+- [ ] Input validation on all endpoints
+- [ ] Meaningful error responses (4xx/5xx appropriate)
+- [ ] API documented (OpenAPI spec)
+- [ ] Pagination implemented on list endpoints
