@@ -5,7 +5,8 @@
 Use this index to choose the right DEV skill before implementation. The default flow for existing projects is:
 
 ```text
-scout -> plan -> craft -> test -> code-review -> ship -> journal
+scout -> plan -> source-check* -> craft -> test -> doubt* -> code-review -> ship
+* = auto-inject khi detect framework / changes > 200 LOC
 ```
 
 ## Skill Groups
@@ -20,6 +21,7 @@ scout -> plan -> craft -> test -> code-review -> ship -> journal
 | Frontend | `/fis:frontend-development`, `/fis:frontend-design`, `/fis:ui-styling`, `/fis:ui-ux-pro-max`, `/fis:react-best-practices`, `/fis:tanstack` | `fullstack-developer`, `ui-ux-designer` | Components, UI states, styling, React patterns |
 | Testing and fixing | `/fis:test`, `/fis:fix`, `/fis:debug`, `/fis:chrome-devtools` | `tester-qa`, `debugger`, `fullstack-developer` | Tests, bugs, RCA, frontend diagnostics |
 | Shipping | `/fis:ship`, `/fis:bootstrap`, `/fis:port-feature`, `/fis:port-repo`, `/fis:xia` | `fullstack-developer`, `devops-sre`, `git-manager` | Bootstrap, release, PR, deploy, feature porting |
+| Engineering Discipline | `/fis:doubt`, `/fis:source-check`, `/fis:secure`, `/fis:simplify`, `/fis:git`, `/fis:observe`, `/fis:adr` | `code-reviewer`, `security-auditor`, `devops-sre` | Adversarial review, docs verification, security audit, refactoring, git hygiene, observability, architecture decisions |
 | Media and 3D | `/fis:threejs`, `/fis:shader`, `/fis:remotion`, `/fis:media-processing` | `fullstack-developer`, `ui-ux-designer` | 3D, shaders, video, image/audio/video processing |
 
 ## Decision Tree
@@ -38,13 +40,22 @@ Is the task database-heavy?
   -> Use /fis:databases before implementation
 
 Is the task auth, payment, or security-sensitive?
-  -> Use security review plus specialized backend skill
+  -> Use /fis:secure for threat model, then specialized backend skill
+
+Is the task using a specific framework (React, FastAPI, etc.)?
+  -> Use /fis:source-check to verify APIs from official docs
 
 Is the task UI-heavy?
   -> Use frontend design/development skills and include responsive states
 
 Is code ready to merge?
   -> Use /fis:test, then /fis:code-review, then /fis:ship
+
+Is change non-trivial (> 200 LOC, architectural)?
+  -> Use /fis:doubt for adversarial self-review
+
+Is this a major release or post-incident?
+  -> Use Engineering Rigor Bundle (secure -> observe -> adr -> doubt -> review)
 ```
 
 ## Primary vs Specialized Skills
@@ -130,6 +141,32 @@ Is code ready to merge?
 - Deploy target:
 - Smoke test:
 - Rollback:
+```
+
+### `/fis:doubt`
+
+```markdown
+## Doubt Report
+- Claim:
+- Artifact reviewed:
+- Findings:
+  - Actionable: [list]
+  - Trade-offs: [list]
+  - Noise: [dismissed]
+- Cross-model: [used? findings?]
+- Actions taken:
+```
+
+### `/fis:secure`
+
+```markdown
+## Security Audit Report
+- Trust boundaries:
+- Threat model (STRIDE):
+- Findings: [Critical/High/Medium/Low]
+- Dependencies audit:
+- LLM security: [if applicable]
+- Positive observations:
 ```
 
 ## DEV Readiness Checklist
