@@ -35,3 +35,23 @@ React Native, Flutter, or native mobile development.
 - Native API integrations
 - App store deployment guidelines
 - Push notification setup
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Framework docs say do X" | Docs = general guidance. Your use case may need adaptation. Verify. |
+| "Latest version is best" | Latest = least tested in production. Pin versions, read changelog. |
+| "Framework handles security" | Framework provides tools, not guarantees. Configure correctly. |
+
+## Red Flags
+- Using deprecated framework APIs
+- Not pinning framework versions
+- Ignoring framework security advisories
+- Not following framework conventions
+
+## Verification
+- [ ] Framework version pinned
+- [ ] Using non-deprecated APIs
+- [ ] Security advisories checked
+- [ ] Following framework conventions
