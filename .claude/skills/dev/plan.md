@@ -77,3 +77,39 @@ Chia phase nhỏ, mỗi phase 1 PR, không big-bang.
 - Dependencies rõ ràng giữa phases
 - Mỗi phase có test riêng
 - Plan file là living document — update khi thực tế thay đổi
+
+## Vertical Slicing (từ agent-skills)
+Mỗi phase PHẢI là một "vertical slice" — chạy được end-to-end (dù nhỏ):
+- ❌ Phase 1: Backend models → Phase 2: Backend APIs → Phase 3: Frontend
+- ✅ Phase 1: User registration (model + API + UI) → Phase 2: Login (model + API + UI)
+
+Vertical slice đảm bảo:
+- Mỗi phase deployable independently
+- Demo được cho stakeholder
+- Test được end-to-end (không chỉ unit)
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Plan mất thời gian, code luôn" | 1 ngày plan = tiết kiệm 3 ngày debug. Không plan = không biết khi nào xong. |
+| "Plan quá chi tiết sẽ cứng nhắc" | Plan là living document — update khi thực tế thay đổi. Plan chi tiết ≠ plan cố định. |
+| "Feature nhỏ không cần plan" | Mọi feature > 50 LOC đều cần plan. "Nhỏ" thường là đánh giá sai. |
+| "Tôi plan trong đầu rồi" | Plan trong đầu = không share được, không track được, không review được. |
+
+## Red Flags
+- Phase > 300 LOC diff
+- Phase không có test riêng
+- Plan không có Definition of Done
+- Dependencies giữa phases không rõ ràng
+- Plan không được update khi thực tế thay đổi
+- Horizontal slicing (tách theo layer thay vì theo feature)
+
+## Verification
+Sau khi plan xong, xác nhận:
+- [ ] Mỗi phase ≤ 1 ngày, ≤ 300 LOC
+- [ ] Mỗi phase có test riêng
+- [ ] Mỗi phase là vertical slice (chạy được end-to-end)
+- [ ] Dependencies rõ ràng (phase nào phụ thuộc phase nào)
+- [ ] Definition of Done cho từng phase
+- [ ] Risks và unknowns đã được identify
