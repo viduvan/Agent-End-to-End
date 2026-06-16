@@ -77,3 +77,22 @@ UI/UX Designer
 - Design spec document (components, states, interactions)
 - Figma-like specification in markdown
 - Asset requirements list
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Design system overkill cho 3 pages" | 3 pages today, 30 tomorrow. Design tokens = consistency from start. |
+| "Copy CSS từ component library" | Understand CSS, not just copy. Customization breaks when you dont understand. |
+
+## Red Flags
+- Inconsistent spacing/colors across pages
+- No design tokens (magic numbers everywhere)
+- Components not reusable
+- No dark mode consideration
+
+## Verification
+- [ ] Design tokens defined (colors, spacing, typography)
+- [ ] Components reusable across pages
+- [ ] Consistent visual language
+- [ ] Dark/light mode supported (or planned)
