@@ -32,3 +32,23 @@ QA perspective:
 ## Output
 - PRD status: `Draft → Reviewed → Approved`
 - Action items nếu chưa pass
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "BA và SA agree, QA review sau" | QA perspective = testability + edge cases. Skip QA = untestable requirements. |
+| "PRD minor update, skip re-review" | Minor change có thể cascade. Quick review (15 phút) tốt hơn surprise. |
+| "Three Amigos quá formal cho team nhỏ" | Team nhỏ = ít formal. Nhưng 3 perspectives vẫn cần (BA/SA/QA mindset). |
+
+## Red Flags
+- Review chỉ có 1-2 perspectives (thiếu QA hoặc SA)
+- Review rubber-stamp (approve mà không challenge)
+- Action items từ review không tracked
+- PRD approved mà vẫn có open questions
+
+## Verification
+- [ ] 3 perspectives present (BA + SA + QA)
+- [ ] Findings documented (not just "approved")
+- [ ] Action items assigned và tracked
+- [ ] Open questions resolved trước khi approve
