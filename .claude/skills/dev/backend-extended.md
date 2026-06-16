@@ -40,3 +40,22 @@ Build Shopify apps, extensions, themes with Shopify CLI. Use for GraphQL/REST AP
 ```
 /fis:shopify "<input>"
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Auth library handles everything" | Auth library handles flow. Security is YOUR responsibility. Check edges. |
+| "OAuth is standard, just plug in" | OAuth standard has many footguns. Verify token validation, PKCE, state param. |
+
+## Red Flags
+- Auth without rate limiting
+- Secrets in code/config
+- Missing CSRF protection
+- Token stored insecurely (localStorage)
+
+## Verification
+- [ ] Rate limiting on auth endpoints
+- [ ] Secrets in env/vault only
+- [ ] CSRF protection enabled
+- [ ] Token storage secure (httpOnly cookies)
