@@ -21,3 +21,20 @@ Debug frontend: performance, network, memory.
 - Network waterfall analysis
 - Memory leak detection
 - Lighthouse audit
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Full resolution OK, users have fast internet" | Many users on mobile/slow connections. Optimize for worst case. |
+| "Format conversion not needed" | Modern formats (WebP, AVIF) save 30-50% bandwidth. Worth it. |
+
+## Red Flags
+- Images not optimized (oversized files)
+- No lazy loading for media
+- Missing format fallbacks
+
+## Verification
+- [ ] Images optimized (WebP/AVIF with fallback)
+- [ ] Lazy loading for below-fold media
+- [ ] Video transcoded for different bandwidths
