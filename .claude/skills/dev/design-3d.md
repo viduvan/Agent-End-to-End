@@ -40,3 +40,20 @@ Build video content with Remotion in React. Use for programmatic video creation,
 ```
 /fis:remotion "<input>"
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "GPU handles performance" | GPU fast ≠ infinite. Shader complexity matters. Profile. |
+| "Visual looks good on my machine" | Test on multiple GPUs/browsers. WebGL compatibility varies. |
+
+## Red Flags
+- No performance profiling
+- Untested on different GPUs/browsers
+- Shader too complex without fallback
+
+## Verification
+- [ ] Performance profiled (FPS stable)
+- [ ] Cross-browser/GPU tested
+- [ ] Fallback for unsupported features
