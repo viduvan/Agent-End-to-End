@@ -23,3 +23,21 @@ Migrate/port entire repo (language change, framework change).
 - Data migration scripts
 - Test suite porting
 - Phased migration plan
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Copy-paste, adjust after" | Copy-paste = copy bugs. Understand → adapt → verify. |
+| "Same framework, same code" | Same framework ≠ same architecture/conventions. Adapt to target project. |
+
+## Red Flags
+- Porting without understanding source code
+- Not adapting to target project conventions
+- Missing tests for ported code
+
+## Verification
+- [ ] Source code understood before porting
+- [ ] Adapted to target project conventions
+- [ ] Tests written for ported functionality
+- [ ] Dependencies reconciled
