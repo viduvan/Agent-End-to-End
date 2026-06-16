@@ -98,3 +98,40 @@ Implement FastAPI endpoints cho agent execution:
 - Test ngay sau craft — không để technical debt
 - Self-review trước khi gửi — `/fis:code-review --pending`
 - Không craft 2 phases cùng lúc (trừ git worktree)
+
+## Prove-It Loop (từ agent-skills)
+Sau MỖI thay đổi nhỏ (1 function, 1 API endpoint):
+1. Save code
+2. Chạy test liên quan → PASS?
+3. Nếu PASS → commit → tiếp slice tiếp theo
+4. Nếu FAIL → fix ngay, KHÔNG craft thêm trên code broken
+
+Prove-it loop đảm bảo:
+- Không bao giờ có > 100 LOC chưa test
+- Mỗi commit là "save point" — revert được an toàn
+- Bug phát hiện ngay, không tích lũy
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Test sau khi code xong" | Code xong = 500 LOC chưa test. Bug ở dòng 50 làm sai 450 dòng còn lại. Test mỗi slice. |
+| "Đã có pattern tương tự, copy paste" | Copy paste = copy bugs. Scout trước, adapt có suy nghĩ. |
+| "Framework này tôi biết rõ rồi" | Training data outdated. Dùng `/fis:source-check` verify API trước khi dùng. |
+| "Refactor luôn trong khi craft feature" | Refactor + feature = 2 concerns = hard to review. Tách commit riêng. |
+
+## Red Flags
+- Craft > 200 LOC mà chưa chạy test nào
+- Craft không scout trước (reuse missed)
+- Framework API dùng từ memory mà không verify docs
+- Mix refactoring với feature trong 1 commit
+- TODO/FIXME/HACK comments không có justification
+
+## Verification
+Sau khi craft xong 1 phase:
+- [ ] Mỗi slice đã qua prove-it loop (code → test → commit)
+- [ ] Scout đã chạy trước craft (có reuse report)
+- [ ] Không có TODO/FIXME/HACK comments (trừ có justification)
+- [ ] Self-review trước khi gửi (`/fis:code-review --pending`)
+- [ ] Commit message theo conventional commits
+- [ ] Không mix refactoring với feature code
