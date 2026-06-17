@@ -23,3 +23,23 @@ Output: artifacts/trd/TRD-0001.md
 
 ## Output
 - `artifacts/trd/TRD-NNNN.md`
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Monolith first, microservice later" | OK nếu boundaries clear. Nhưng "later" cần plan, không chỉ hope. |
+| "Over-engineering cho MVP" | MVP ≠ bad architecture. Clean boundaries + simple implementation. |
+| "Team nhỏ, không cần TRD" | TRD cho future team. Architecture decisions cần context. |
+
+## Red Flags
+- TRD không có NFR section (performance, security, scalability)
+- No alternatives considered (single option = no decision)
+- Missing integration patterns (how services communicate)
+- TRD không link về PRD/AC
+
+## Verification
+- [ ] NFRs defined (performance targets, security requirements)
+- [ ] Alternatives considered và documented
+- [ ] Integration patterns defined (sync/async, protocols)
+- [ ] TRD linked to PRD AC (traceability)
