@@ -44,3 +44,20 @@ Personas dùng làm input cho:
 - Three Amigos review (BA + SA + QA)
 - Agent routing (chọn agent phù hợp cho task)
 - Role-based artifact ownership
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Team nhỏ, ai cũng biết role mình" | Biết role ≠ clear ownership boundaries. Persona doc = accountability map. |
+| "Personas là overhead, làm việc thôi" | Persona = who does what, who owns what. 15 phút define = weeks of clarity. |
+
+## Red Flags
+- Ownership overlaps (2 roles own same artifact)
+- Gaps (artifact has no owner)
+- Personas không match actual team capabilities
+
+## Verification
+- [ ] Every role has clear responsibilities
+- [ ] No ownership overlaps or gaps
+- [ ] RACI matrix defined cho key deliverables
