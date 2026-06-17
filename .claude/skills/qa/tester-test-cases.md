@@ -35,3 +35,24 @@ test_should_respond_within_500ms_p95()
 
 ## Output
 - `tests/` directory — test files
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Test automation quá chậm, manual đủ" | Manual không scale, không reproducible. Automate core flows. |
+| "Test happy path trước, edge case sau" | "Sau" = sau production bug. Edge cases cùng lúc happy path. |
+| "Mock service ngoài quá phức tạp" | Mock ở boundary là best practice. Fixture data reusable. |
+
+## Red Flags
+- Test cases chỉ cover happy path
+- Test names không mô tả scenario
+- Không có test cho error/edge cases từ TestSpec
+- Test bị skip hoặc commented out mà không justification
+
+## Verification
+- [ ] Test cases cover tất cả scenarios từ TestSpec
+- [ ] Test names descriptive (test_should_X_when_Y)
+- [ ] Arrange/Act/Assert structure rõ ràng
+- [ ] Mock chỉ ở boundaries (DB, external API)
+- [ ] Tests chạy trong CI pipeline
