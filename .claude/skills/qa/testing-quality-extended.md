@@ -67,3 +67,22 @@ Phát hiện edge cases — 12 dimensions.
 - Concurrent/race condition scenarios
 - Data validation edge cases
 - Output: scenario list ranked by risk
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Manual testing đủ cho UI" | Manual = not repeatable. Visual regression tools = automated UI testing. |
+| "E2E tests flaky, bỏ" | Flaky = fix, not abandon. E2E catches integration bugs unit tests miss. |
+
+## Red Flags
+- No visual regression testing
+- E2E suite abandoned due to flakiness
+- Browser testing only on Chrome
+- No accessibility testing
+
+## Verification
+- [ ] Visual regression baseline established
+- [ ] E2E suite maintained (flakiness addressed)
+- [ ] Multi-browser testing
+- [ ] Accessibility audit included
