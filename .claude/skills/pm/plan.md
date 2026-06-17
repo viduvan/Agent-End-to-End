@@ -42,3 +42,24 @@ Milestone M2 (Tuần 5-8):
 - Resources: 1 person full-time
 - Risk: UI framework learning curve
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Agile không cần plan chi tiết" | Agile ≠ no plan. Agile = plan iteratively. Sprint plan vẫn cần. |
+| "Timeline estimate chính xác không được" | Estimate ≠ exact. Ranges (optimistic/likely/pessimistic) + buffer. |
+| "Team tự organize, PM track sau" | Self-organize ≠ no tracking. PM provides visibility + removes blockers. |
+
+## Red Flags
+- Sprint plan không có acceptance criteria per story
+- No buffer/contingency (assumes everything goes perfectly)
+- Dependencies not mapped (blocked stories discovered mid-sprint)
+- No retrospective action from previous sprint applied
+
+## Verification
+- [ ] Sprint goal defined
+- [ ] Stories estimated với acceptance criteria
+- [ ] Dependencies mapped
+- [ ] 20% buffer included
+- [ ] Previous retro actions applied
