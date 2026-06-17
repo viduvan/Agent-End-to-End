@@ -19,3 +19,20 @@ CI pipeline fail ở step "test":
 ## Output
 - Auto-fix PR nếu pattern known
 - Diagnosis report nếu unknown
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Auto-fix is safe, just formatting" | Auto-fix can change behavior (import ordering, etc.). Review diffs. |
+| "Pipeline fix, ship ngay" | Auto-fix = tool suggestion. Human review bắt buộc before commit. |
+
+## Red Flags
+- Auto-fix applied without reviewing diff
+- Behavioral changes from auto-fix not tested
+- Auto-fix rules not configured for project
+
+## Verification
+- [ ] Auto-fix diff reviewed before commit
+- [ ] Tests pass after auto-fix
+- [ ] Auto-fix rules configured cho project conventions
