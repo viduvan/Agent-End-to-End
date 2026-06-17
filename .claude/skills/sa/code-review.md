@@ -36,3 +36,23 @@ Checklist:
 ## Consequences
 ## References
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Code works, architecture OK" | Working code ≠ good architecture. Check boundaries, coupling, cohesion. |
+| "Nit-pick kiến trúc mất thời gian" | Architecture debt compounds. Early feedback = cheap fix. |
+| "DEV code-review đủ rồi" | DEV review = correctness. SA review = architecture alignment. Both needed. |
+
+## Red Flags
+- Review chỉ check syntax/logic, skip architecture
+- Architecture violations dismissed as "too late to fix"
+- No reference to TRD / established patterns
+- Review without running code
+
+## Verification
+- [ ] Architecture patterns checked (vs TRD)
+- [ ] Module boundaries maintained
+- [ ] New patterns justified (không introduce ad-hoc)
+- [ ] Performance/security implications reviewed
