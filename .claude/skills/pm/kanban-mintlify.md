@@ -25,3 +25,20 @@ Build and deploy documentation sites with Mintlify. Use when creating API docs, 
 ```
 /fis:mintlify "<input>"
 ```
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Board update mất thời gian" | 2 phút update < 30 phút status meeting. Board = async communication. |
+| "WIP limit không cần" | No WIP limit = context switching = reduced quality. Limit WIP. |
+
+## Red Flags
+- Board not updated (stale cards)
+- No WIP limits (too many in-progress items)
+- Done column never reviewed (no celebration/retro)
+
+## Verification
+- [ ] Board current (updated daily)
+- [ ] WIP limits enforced
+- [ ] Blocked items visible và escalated
