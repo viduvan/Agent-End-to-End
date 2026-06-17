@@ -24,3 +24,26 @@ DevOps Tuấn
 ## Output
 - Deployment URL + status
 - Monitoring dashboard link
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Staging OK = production OK" | Data khác, traffic khác, edge cases khác. Monitor sau deploy. |
+| "Rollback plan viết sau" | Không có rollback = không nên deploy. Plan trước. |
+| "CI chậm, skip step này" | CI chậm = optimize CI, không skip quality gates. |
+| "Friday afternoon, nhỏ thôi" | Never deploy Friday PM. Bugs phát hiện khi không ai online. |
+
+## Red Flags
+- Deploy không có rollback plan
+- Skip security scan trong CI pipeline
+- Secrets trong code/config (phải dùng vault/env)
+- Không monitoring post-deploy
+- Big-bang release (phải canary/blue-green)
+
+## Verification
+- [ ] CI pipeline có đủ quality gates (lint, test, build, security scan)
+- [ ] Rollback plan documented và tested
+- [ ] Secrets in vault/env, NOT in code
+- [ ] Monitoring configured (error rate, latency, memory)
+- [ ] Canary strategy defined cho production
