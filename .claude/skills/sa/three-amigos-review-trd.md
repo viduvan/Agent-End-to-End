@@ -27,3 +27,23 @@ QA perspective:
 
 ## Output
 - TRD status: `Draft → Reviewed → Approved`
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "TRD quá technical cho BA/QA review" | BA checks business alignment. QA checks testability. Cả hai cần. |
+| "SA designed it, SA approves it" | SA approve own work = no review. Three Amigos = external perspectives. |
+| "TRD approved miệng rồi" | Verbal = no trail. Written sign-off + action items tracked. |
+
+## Red Flags
+- TRD approved without BA perspective (business misalignment risk)
+- TRD approved without QA perspective (untestable architecture)
+- Action items not tracked
+- TRD conflicts with PRD not flagged
+
+## Verification
+- [ ] BA confirmed business alignment
+- [ ] QA confirmed testability
+- [ ] Action items tracked to completion
+- [ ] TRD consistent with PRD
