@@ -35,3 +35,22 @@ Root cause hypothesis: Token truncation ở LLM layer
 
 ## Output
 - `artifacts/bugs/BG-NNNN.md`
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Bug description trong chat đủ" | Chat = ephemeral. Formal bug report = trackable, reproducible, prioritizable. |
+| "Screenshot nói lên tất cả" | Screenshot = symptom. Bug report = steps to reproduce + expected vs actual. |
+
+## Red Flags
+- Bug report without steps to reproduce
+- Missing expected vs actual behavior
+- No severity/priority assigned
+- Environment info not captured
+
+## Verification
+- [ ] Steps to reproduce clear (1, 2, 3...)
+- [ ] Expected vs actual behavior documented
+- [ ] Severity/priority assigned
+- [ ] Environment captured (OS, browser, version)
