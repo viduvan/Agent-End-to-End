@@ -74,3 +74,25 @@ Output: `artifacts/pm/retro-{date}.md`
 Visualize: Todo → In Progress → Review → Done.
 ```
 Output: `artifacts/pm/KANBAN.md`
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Status report tuần sau viết" | "Tuần sau" = quên context. Write as you go. |
+| "Risk low, không cần RAID log" | Low risk = 1 risk. Logging nó mất 2 phút. Not logging → forgotten → incident. |
+| "Kanban/board quá formal" | Visual tracking = team alignment. 5 phút update board > 30 phút status meeting. |
+| "Retrospective lặp lại" | Retro lặp = action items không implement. Track action → implement → verify. |
+
+## Red Flags
+- Status report outdated (> 1 week)
+- RAID log not updated (risks discovered but not logged)
+- Action items từ retro không tracked
+- No burn-down / velocity tracking
+- Blockers not escalated timely
+
+## Verification
+- [ ] Status report current (updated within last sprint)
+- [ ] RAID log maintained (reviewed weekly)
+- [ ] Retro action items tracked to completion
+- [ ] Velocity/burndown visible to stakeholders
