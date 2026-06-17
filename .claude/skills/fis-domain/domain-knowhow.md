@@ -114,3 +114,23 @@ Localization cho market Việt Nam.
 - Currency formatting (VNĐ)
 - Date format (dd/MM/yyyy)
 - Legal compliance (NĐ 13/2023 data privacy)
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Standard implementation, không cần domain knowledge" | FIS domain có specific rules (SAP, eHRP, etc.). Standard ≠ correct for FIS. |
+| "Domain expert sẽ validate sau" | Validate sớm = cheap fix. Validate sau = expensive rework. |
+| "Best practices đủ, domain-specific overkill" | Best practices = general. Domain knowhow = specific constraints + regulations. |
+
+## Red Flags
+- Implementing without checking domain-specific rules
+- Ignoring FIS-specific compliance requirements
+- Using generic patterns when domain requires specific ones
+- Not consulting domain SME for critical features
+
+## Verification
+- [ ] Domain-specific rules checked
+- [ ] FIS compliance requirements met
+- [ ] Domain SME consulted cho critical features
+- [ ] Domain terminology consistent (ubiquitous language)
