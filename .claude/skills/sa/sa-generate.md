@@ -21,3 +21,23 @@ SA Marcus
 ## Output
 - `artifacts/trd/TRD-NNNN.md` (reverse-engineered)
 - `artifacts/decisions/ADR-NNNN.md` cho mỗi tech choice
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Code đang chạy, architecture tốt rồi" | Running ≠ well-architected. Technical debt invisible cho đến khi scale. |
+| "ADR viết sau khi ổn định" | "Ổn định" = quên tại sao chọn PostgreSQL. ADR ngay khi decide. |
+| "Reverse-engineer nhanh thôi" | Brownfield TRD cần verify: code behavior = intended behavior? |
+
+## Red Flags
+- Generated TRD không verified với actual behavior
+- Missing rationale (WHY this architecture)
+- ADR không có alternatives considered
+- Technical debt không identified
+
+## Verification
+- [ ] TRD verified against actual system behavior
+- [ ] Rationale documented cho mỗi architecture decision
+- [ ] ADR created cho mỗi significant tech choice
+- [ ] Technical debt identified và cataloged
