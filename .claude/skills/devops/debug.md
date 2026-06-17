@@ -35,3 +35,27 @@ Phân tích logs/production.log:
 ## Output
 - Root cause analysis report
 - Fix recommendations ranked by impact
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Restart service là xong" | Restart = patch, không fix root cause. RCA bắt buộc. |
+| "Chắc do OOM, tăng memory" | Tăng memory che memory leak. Tìm root cause: leak? query heavy? cache miss? |
+| "Logs quá nhiều, skip phân tích" | Filter + group logs theo error type. Top 5 errors = 80% vấn đề. |
+| "Lỗi intermittent, không reproduce được" | Thu thập thêm data: correlation ID, timestamps, load patterns. Intermittent ≠ non-existent. |
+
+## Red Flags
+- Restart/scale up mà không RCA
+- Tăng resources mà không hiểu tại sao cần
+- Debug không có metrics/logs/traces
+- Fix mà không add monitoring cho vấn đề đó
+- Ignore intermittent errors
+
+## Verification
+Sau khi debug xong:
+- [ ] Root cause identified (không chỉ symptom)
+- [ ] RCA report documented
+- [ ] Monitoring/alert added cho issue tương tự
+- [ ] Fix verified trong staging trước production
+- [ ] Runbook updated nếu pattern mới
