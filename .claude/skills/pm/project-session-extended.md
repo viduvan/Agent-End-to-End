@@ -63,3 +63,20 @@ Tổ chức project files, folders, conventions.
 - Import/export patterns
 - Module boundary definition
 - Config file organization
+
+## Rationalizations thường gặp
+
+| Rationalization | Thực tế |
+|---|---|
+| "Session notes trong head đủ rồi" | Head = volatile storage. Notes = persistent. Write down. |
+| "Config tracking không cần formal" | Config drift = environment differences = "works on my machine". Track. |
+
+## Red Flags
+- Session notes not captured (knowledge lost)
+- Config changes not tracked
+- Plan changes not reflected in board
+
+## Verification
+- [ ] Session notes captured structured
+- [ ] Config changes tracked
+- [ ] Plan updates reflected in board/timeline
