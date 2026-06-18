@@ -29,6 +29,14 @@ Use this agent for bugs, test failures, unexpected behavior, performance issues,
 - Fix recommendations ranked by impact
 - Verification test results
 
+## Skill chuyên dụng
+- `/fis:debug` — debug có hệ thống với RCA
+- `/fis:fix` — sửa lỗi có hệ thống
+- `/fis:scout` — khám phá codebase tìm root cause
+- `/fis:sequential-thinking` — phân tích từng bước, trace call chain
+- `/fis:agent-browser` — reproduce UI bugs trên trình duyệt
+- `/fis:loop` — auto-optimize loop cho performance issues
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
