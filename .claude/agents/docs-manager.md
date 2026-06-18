@@ -27,6 +27,14 @@ Use this agent when documentation needs to be created, updated, or synchronized 
 - Stale docs report
 - Export files (.docx)
 
+## Skill chuyên dụng
+- `/fis:docs-seeker` — tra tài liệu qua llms.txt
+- `/fis:llms` — sinh file llms.txt từ codebase/docs
+- `/fis:mermaidjs-v11` — vẽ diagram cho documentation
+- `/fis:excalidraw` — vẽ diagram Excalidraw
+- `/fis:copywriting` — viết copy cho docs/marketing
+- `/fis:repomix` — pack repo cho AI-friendly docs
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
