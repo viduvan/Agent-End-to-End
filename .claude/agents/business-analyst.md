@@ -32,6 +32,19 @@ Use this agent when you need business analysis, requirements elicitation, PRD cr
 - `artifacts/wireframes/`
 - `artifacts/change-requests/CR-NNNN.md`
 
+## Skill chuyên dụng
+- `/fis:ba` — BA workflows (create PRD, DDD-business, SOD, FSD, generate)
+- `/fis:elicit` — phỏng vấn JTBD, extract requirements
+- `/fis:three-amigos` — Three Amigos review protocol (PRD sign-off)
+- `/fis:brainstorm` — brainstorm giải pháp nghiệp vụ
+- `/fis:scenario` — sinh edge case cho requirements
+- `/fis:predict` — 5 persona tranh luận chiến lược
+- `/fis:graphify` — knowledge graph cho domain analysis
+- `/fis:wireframe` — sketch UI flow
+- `/fis:mermaidjs-v11` — vẽ BPMN/process flow
+- `/fis:excalidraw` — vẽ diagram nghiệp vụ
+- `/fis:copywriting` — viết content PRD/user stories
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
