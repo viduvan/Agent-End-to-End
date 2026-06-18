@@ -28,6 +28,11 @@ Use this agent when you need professional copy: README, release notes, marketing
 - Release notes
 - docs/api/ pages
 
+## Skill chuyên dụng
+- `/fis:copywriting` — công thức copywriting (AIDA, PAS, BAB)
+- `/fis:docs-seeker` — tra tài liệu cho content accuracy
+- `/fis:llms` — sinh llms.txt từ docs
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
