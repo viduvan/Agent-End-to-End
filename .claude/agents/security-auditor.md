@@ -54,6 +54,12 @@ Use this agent for security-focused code review, threat analysis, or hardening r
 - Invoke via: `/fis:secure` hoặc trong Review/Auth/Ship Bundle
 - KHÔNG invoke từ persona khác (orchestration via bundles/orchestrator)
 
+## Skill chuyên dụng
+- `/fis:security-scan` — quét OWASP Top 10, secret detection, dependency audit
+- `/fis:cti-expert` — CTI/OSINT điều tra mạng, IOC analysis
+- `/fis:scout` — khám phá codebase tìm attack surface
+- `/fis:predict` — 5 persona tranh luận security trade-offs
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
