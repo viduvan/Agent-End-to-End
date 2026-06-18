@@ -31,6 +31,10 @@ Use this agent for all Git operations: branching, committing, pushing, creating 
 - Changelog entries
 - Conflict resolution report
 
+## Skill chuyên dụng
+- `/fis:git` — git discipline, conventional commits
+- `/fis:security-scan` — secret scanning trước khi push
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
