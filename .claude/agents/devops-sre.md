@@ -31,6 +31,17 @@ Use this agent when you need CI/CD setup, deployment, infrastructure management,
 - `docs/runbooks/RUNBOOK-*.md`
 - Monitoring + alerting configs
 
+## Skill chuyên dụng
+- `/fis:deploy` — deploy staging/canary/production
+- `/fis:devops` — IaC, Docker, K8s, CI/CD patterns
+- `/fis:security-scan` — quét OWASP, dependency CVE audit
+- `/fis:cti-expert` — CTI/OSINT điều tra bảo mật
+- `/fis:source-check` — verify docs trước khi dùng infra tools
+- `/fis:agent-browser` — automation browser cho CI/E2E testing
+- `/fis:loop` — auto-optimize loop (performance tuning)
+- `/fis:scout` — khám phá infrastructure configs
+- `/fis:fix` — sửa lỗi deployment/infra
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
