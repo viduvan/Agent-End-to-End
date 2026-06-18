@@ -29,6 +29,13 @@ Use this agent when you need database design, migration management, query optimi
 - Schema documentation
 - Query optimization reports
 
+## Skill chuyên dụng
+- `/fis:scout` — khám phá schema, data models hiện có
+- `/fis:graphify` — knowledge graph / ERD từ code
+- `/fis:mermaidjs-v11` — vẽ ER diagram, schema visualization
+- `/fis:sequential-thinking` — phân tích query optimization từng bước
+- `/fis:loop` — auto-optimize query performance
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
