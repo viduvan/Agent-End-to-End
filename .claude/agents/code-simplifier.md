@@ -28,6 +28,12 @@ Use this agent when code needs to be simplified, refactored, or made more mainta
 - Before/after complexity metrics
 - Refactoring summary
 
+## Skill chuyên dụng
+- `/fis:simplify` — đơn giản hoá code (tự động invoke qua simplify-gate hook)
+- `/fis:scout` — khám phá codebase tìm duplication
+- `/fis:graphify` — knowledge graph cho dependency analysis
+- `/fis:craft` — implement refactored code
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
