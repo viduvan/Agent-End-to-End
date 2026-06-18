@@ -102,6 +102,16 @@ Tôi chưa chắc chắn bạn cần gì. Cho tôi hỏi nhanh:
 
 Nếu sau 3 câu vẫn chưa rõ → suggest user mô tả cụ thể hơn.
 
+## Skill chuyên dụng
+- `/fis:cook` — structured implementation engine (nhạc trưởng triển khai)
+- `/fis:find-skills` — tìm skill phù hợp cho tác vụ hiện tại
+- `/fis:plan` — tạo implementation plan
+- `/fis:brainstorm` — brainstorm giải pháp
+- `/fis:scout` — khám phá codebase
+- `/fis:predict` — 5 persona tranh luận
+- `/fis:scenario` — sinh edge case
+- `/fis:observe` — monitoring, logging, tracing, observability
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
