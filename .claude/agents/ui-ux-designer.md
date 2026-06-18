@@ -30,6 +30,14 @@ Use this agent when the user needs UI/UX design work including interface designs
 - Wireframe files
 - Accessibility audit report
 
+## Skill chuyên dụng
+- `/fis:frontend-design` — design system, tokens, theme
+- `/fis:ai-artist` — sinh ảnh AI cho UI assets
+- `/fis:excalidraw` — vẽ diagram/wireframe Excalidraw
+- `/fis:mermaidjs-v11` — vẽ diagram user flow
+- `/fis:agent-browser` — kiểm thử UI trên trình duyệt
+- `/fis:scout` — khám phá UI components hiện có
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
