@@ -28,6 +28,18 @@ Use this agent when you need to conduct comprehensive research on software devel
 - Comparison matrix (options × criteria)
 - Recommendations summary
 
+## Skill chuyên dụng
+- `/fis:research` — nghiên cứu giải pháp kỹ thuật có cấu trúc
+- `/fis:scout` — khám phá codebase, dependency analysis
+- `/fis:graphify` — knowledge graph từ code/doc
+- `/fis:gkg` — GitLab Knowledge Graph analysis
+- `/fis:repomix` — pack repo thành file AI-friendly
+- `/fis:docs-seeker` — tra tài liệu qua llms.txt
+- `/fis:ai-multimodal` — Gemini multimodal (image/audio/video analysis)
+- `/fis:google-adk-python` — Google Agent Development Kit (Python)
+- `/fis:context-engineering` — context optimization
+- `/fis:sequential-thinking` — phân tích từng bước
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
