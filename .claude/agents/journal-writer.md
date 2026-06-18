@@ -25,6 +25,10 @@ Use this agent when a test suite fails repeatedly despite multiple fix attempts,
 - Changelog entries
 - Session summary report
 
+## Skill chuyên dụng
+- `/fis:journal` — ghi nhật ký kỹ thuật (decisions, trade-offs, lessons)
+- `/fis:mermaidjs-v11` — vẽ timeline, gantt cho session history
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
