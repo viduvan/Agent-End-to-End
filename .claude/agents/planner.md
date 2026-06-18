@@ -29,6 +29,18 @@ Use this agent when you need to research, analyze, and create comprehensive impl
 - Viết: plan files trong `plans/`
 - KHÔNG viết code — chỉ plan
 
+## Skill chuyên dụng
+- `/fis:plan` — tạo implementation plan chi tiết
+- `/fis:brainstorm` — brainstorm giải pháp với trade-off
+- `/fis:predict` — 5 persona tranh luận trước khi quyết định
+- `/fis:scenario` — sinh edge case theo 12 chiều
+- `/fis:graphify` — knowledge graph cho architecture analysis
+- `/fis:sequential-thinking` — phân tích từng bước
+- `/fis:scout` — khám phá codebase trước khi plan
+- `/fis:research` — nghiên cứu giải pháp kỹ thuật
+- `/fis:mermaidjs-v11` — vẽ diagram kiến trúc
+- `/fis:excalidraw` — vẽ diagram Excalidraw
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
