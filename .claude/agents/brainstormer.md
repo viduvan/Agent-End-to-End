@@ -26,6 +26,15 @@ Use this agent when you need creative technical input for architecture decisions
 - Recommended approach với rationale
 - POC scope definition
 
+## Skill chuyên dụng
+- `/fis:brainstorm` — brainstorm giải pháp với trade-off analysis
+- `/fis:predict` — 5 persona chuyên gia tranh luận
+- `/fis:scenario` — sinh edge case theo 12 chiều
+- `/fis:sequential-thinking` — phân tích từng bước, revise mid-way
+- `/fis:research` — nghiên cứu giải pháp kỹ thuật
+- `/fis:graphify` — knowledge graph cho architecture analysis
+- `/fis:context-engineering` — context optimization cho agent systems
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
