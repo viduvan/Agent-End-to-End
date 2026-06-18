@@ -33,6 +33,14 @@ Use this agent when you need comprehensive project oversight and coordination. E
 - `artifacts/pm/retro-{date}.md`
 - `artifacts/pm/KANBAN.md`
 
+## Skill chuyên dụng
+- `/fis:pm` — PM workflows (status-report, lessons-learned, retro)
+- `/fis:plan` — tạo đầu việc và plan cho agents
+- `/fis:mermaidjs-v11` — vẽ gantt chart, timeline
+- `/fis:excalidraw` — vẽ diagram dự án
+- `/fis:scenario` — sinh risk scenarios
+- `/fis:copywriting` — viết status report, stakeholder comms
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
