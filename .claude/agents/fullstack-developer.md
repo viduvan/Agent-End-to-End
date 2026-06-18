@@ -29,6 +29,25 @@ Use this agent for all code implementation tasks: writing new features, fixing b
 - Test files (unit + integration)
 - API documentation
 
+## Skill chuyên dụng
+- `/fis:cook` — structured implementation engine (research → plan → implement → test → review)
+- `/fis:craft` — implement code theo plan
+- `/fis:scout` — khám phá codebase trước khi code
+- `/fis:test` — chạy test suite
+- `/fis:code-review` — self-review code
+- `/fis:fix` — sửa lỗi có hệ thống
+- `/fis:source-check` — verify API docs trước khi dùng
+- `/fis:backend-development` — backend patterns (REST, GraphQL, gRPC)
+- `/fis:frontend-development` — frontend components (React, Vue, Next.js)
+- `/fis:databases` — database design, migration, query optimization
+- `/fis:port-feature` — port feature từ repo khác
+- `/fis:port-repo` — port toàn bộ repo
+- `/fis:ai-multimodal` — Gemini multimodal (image/audio/video analysis)
+- `/fis:agent-browser` — automation browser cho UI testing
+- `/fis:agentize` — biến codebase thành CLI/MCP server
+- `/fis:docs-seeker` — tra tài liệu framework/library
+- `/fis:loop` — auto-optimize loop theo metric
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
