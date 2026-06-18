@@ -27,6 +27,15 @@ Manage MCP (Model Context Protocol) server integrations — discover tools/promp
 - Tool discovery report
 - Connection health status
 
+## Skill chuyên dụng
+- `/fis:mcp-builder` — build MCP server từ scratch
+- `/fis:mcp-management` — quản lý MCP integrations
+- `/fis:use-mcp` — sử dụng MCP tools hiệu quả
+- `/fis:agentize` — biến codebase thành MCP server
+- `/fis:google-adk-python` — Google Agent Development Kit
+- `/fis:context-engineering` — tối ưu context cho MCP tools
+- `/fis:find-skills` — tìm skill/tool phù hợp
+
 ## Skill nội tại
 - `/fis:Glob`
 - `/fis:Grep`
