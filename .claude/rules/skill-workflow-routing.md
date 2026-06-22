@@ -17,7 +17,7 @@ debug → fix → test → code-review → ship → journal
 
 ### 3. Investigation / Research
 ```
-scout → gkg → research → brainstorm → plan
+scout → gkg → graphify → research → brainstorm → predict → plan
 ```
 
 ### 4. Refactoring
@@ -34,12 +34,22 @@ bootstrap → plan → craft × N → test → ship → journal
 
 ### Full Pipeline (multi-role)
 ```
-BA:     elicit → ba create → wireframe → three-amigos:review-prd
-SA:     sa design → sa ddd-tech → sa feature-spec → three-amigos:review-trd
+BA:     elicit → ba create → wireframe → scenario → three-amigos:review-prd
+SA:     sa design → sa ddd-tech → graphify → sa feature-spec → three-amigos:review-trd
 DEV:    plan → craft × N → test
-QA:     tester test-spec → tester test-cases → test → tester bug
-DevOps: devops → deploy → debug (if issues)
+QA:     tester test-spec → scenario → tester test-cases → test → agent-browser → tester bug
+DevOps: devops → deploy → security-scan → debug (if issues)
 PM:     pm status-report → pm lessons-learned → pm retro
+```
+
+### Context & Agent Engineering
+```
+context-engineering → repomix → find-skills → agentize → sequential-thinking
+```
+
+### Security Audit
+```
+scout → security-scan → cti-expert → predict → plan (remediation)
 ```
 
 ## Routing Rules
