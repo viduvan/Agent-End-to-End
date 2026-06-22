@@ -1,7 +1,7 @@
 # DevOps Workflows (4 workflows)
 
 ## Workflow DevOps-1: CI/CD, Deploy & Monitoring ⭐ (Quan trọng nhất)
-**Skills**: `/fis:devops`, `/fis:deploy`, `/fis:debug`
+**Skills**: `/fis:devops`, `/fis:deploy`, `/fis:debug`, `/fis:security-scan`
 
 ### Kịch bản
 GitHub Actions CI/CD → Docker build → Staging deploy → Canary production → Monitoring.
@@ -179,7 +179,7 @@ Target:
 ---
 
 ## Workflow DevOps-4: Bảo trì dự án cũ (DevOps Perspective)
-**Skills**: `/fis:scout`, `/fis:fix`, `/fis:security-scan`
+**Skills**: `/fis:scout`, `/fis:fix`, `/fis:security-scan`, `/fis:cti-expert`
 
 DevOps tasks:
 - Dependency vulnerability scan (safety, trivy)
