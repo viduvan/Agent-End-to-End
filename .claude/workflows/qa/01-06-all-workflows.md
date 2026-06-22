@@ -79,7 +79,7 @@ TOTAL                   | 75%   | 66%    | 70%    | ✅
 ---
 
 ## Workflow QA-2: Thêm tính năng mới (QA Perspective)
-**Skills**: `/fis:tester test-spec`, `/fis:test`
+**Skills**: `/fis:tester test-spec`, `/fis:scenario`, `/fis:test`, `/fis:agent-browser`
 
 QA trong Adding Feature pipeline:
 ```
@@ -142,7 +142,7 @@ Security tests:
 ---
 
 ## Workflow QA-5: API Testing
-**Skills**: `/fis:web-testing`, `/fis:test`
+**Skills**: `/fis:web-testing`, `/fis:test`, `/fis:agent-browser`
 
 QA tasks:
 - API contract test (request/response schema)
