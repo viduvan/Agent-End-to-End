@@ -1,15 +1,17 @@
 # FIS Skills — Documentation
 
-> **Tổng**: 82+ skills trong 60 markdown files, gồm skill docs và index files | **Nguồn**: https://ai.fis.com.vn/cheatsheet
-> **Architecture**: One-file-per-skill hoặc grouped-by-domain
+> **Tổng**: 92+ skills trong 107 markdown files (standalone + reference index) | **Nguồn**: https://ai.fis.com.vn/library?tab=skills
+> **Architecture**: One-file-per-skill (standalone) + Reference Index files cho backward compatibility
 
 ## Skills là gì?
 
 Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 markdown file mô tả:
 - **Slash command** (`/fis:<skill>`) để kích hoạt
-- **Mục đích** + khi nào dùng
-- **Prompt template** cho kết quả tốt nhất
-- **Output** mong đợi
+- **Mục đích** + khi nào dùng / khi KHÔNG dùng
+- **Prompt mẫu** (2-5 examples với context)
+- **Rationalizations** — common excuses và thực tế
+- **Red Flags** — dấu hiệu dùng sai
+- **Verification** — checklist kiểm tra
 
 ## Cách gọi Skill
 
@@ -24,18 +26,18 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 
 ## Tổng quan theo Folder (10 categories)
 
-| Folder | Files | Skills | Vai trò | Roles |
-|--------|-------|--------|---------|-------|
-| `ba/` | 10 | 10 | Business Analysis & Requirements | BA |
-| `sa/` | 7 | 7 | Architecture & Design | SA |
-| `dev/` | 18 | 29 | Development & Implementation | DEV |
-| `qa/` | 8 | 8 | Testing & Quality | QA |
-| `devops/` | 5 | 6 | Infrastructure & Deployment | DevOps |
-| `pm/` | 6 | 12 | Project Management | PM |
-| `cross-role/` | 2 | 15 | Docs, Analysis, Cross-cutting | All |
-| `ai-tools/` | 2 | 10 | AI/ML Tools & MCP | All |
-| `fis-domain/` | 1 | 8 | FIS Industry Verticals | Domain |
-| `meta/` | 1 | 7 | Kit Self-Management | Meta |
+| Folder | Standalone | Index | Skills | Vai trò | Roles |
+|--------|-----------|-------|--------|---------|-------|
+| `ba/` | 10 | 0 | 10 | Business Analysis & Requirements | BA |
+| `sa/` | 7 | 0 | 7 | Architecture & Design | SA |
+| `dev/` | **51** | 11 | **51** | Development & Implementation | DEV |
+| `qa/` | 9 | 0 | 9 | Testing & Quality | QA |
+| `devops/` | 5 | 1 | 6 | Infrastructure & Deployment | DevOps |
+| `pm/` | 6 | 0 | 12 | Project Management | PM |
+| `cross-role/` | **8** | 1 | **8** | Docs, Analysis, Cross-cutting | All |
+| `ai-tools/` | **10** | 2 | **10** | AI/ML Tools & MCP | All |
+| `fis-domain/` | 1 | 0 | 8 | FIS Industry Verticals | Domain |
+| `meta/` | **3** | 0 | **3** | Kit Self-Management | Meta |
 
 ---
 
@@ -68,7 +70,9 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 | 6 | Code Review | `/fis:code-review` | `code-review.md` | PR review adversarial |
 | 7 | Three Amigos TRD | `/fis:three-amigos:review-trd` | `three-amigos-review-trd.md` | Sign-off TRD |
 
-### 💻 DEV — Development (22+ skills)
+### 💻 DEV — Development (51 skills)
+
+#### Core Skills (đã có standalone từ trước)
 
 | # | Skill | Command | File | Mô tả |
 |---|-------|---------|------|--------|
@@ -76,33 +80,76 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 | 2 | Scout | `/fis:scout` | `scout.md` | Hiểu codebase, find patterns |
 | 3 | Craft | `/fis:craft` | `craft.md` | Implement code theo plan |
 | 4 | Fix | `/fis:fix` | `fix.md` | Sửa bug có hệ thống |
-| 5 | Test | `/fis:test` | `test.md` | Run tests + coverage |
-| 6 | Ship | `/fis:ship` | `ship-bootstrap.md` | Ship feature + bootstrap |
-| 7 | Bootstrap | `/fis:bootstrap` | `ship-bootstrap.md` | Scaffold project mới |
-| 8 | Backend Dev | `/fis:backend-development` | `backend-development.md` | FastAPI/Express backend |
-| 9 | Frontend Dev | `/fis:frontend-development` | `frontend-development.md` | React/Vue/Next.js |
-| 10 | Frontend Design | `/fis:frontend-design` | `frontend-ui-extended.md` | Design system, CSS |
-| 11 | Databases | `/fis:databases` | `databases.md` | Schema, migrations, queries |
-| 12 | Web Frameworks | `/fis:web-frameworks` | `frameworks.md` | Framework optimization |
-| 13 | Repomix | `/fis:repomix` | `codebase-analysis.md` | Pack codebase for AI |
-| 14 | GKG | `/fis:gkg` | `codebase-analysis.md` | Knowledge graph analysis |
-| 15 | Port Feature | `/fis:port-feature` | `port-adapt.md` | Port feature between repos |
-| 16 | Port Repo | `/fis:port-repo` | `port-adapt.md` | Port entire repo |
-| 17 | Cook | `/fis:cook` | `new-skills.md` | Structured code implementation |
-| 18 | Stitch | `/fis:stitch` | `new-skills.md` | Merge file chunks |
-| 19 | Show-off | `/fis:show-off` | `new-skills.md` | Demo showcase |
-| 20 | Xia | `/fis:xia` | `new-skills.md` | UI component builder |
-| 21 | Better Auth | `/fis:better-auth` | `backend-extended.md` | Auth with Better-Auth |
-| 22 | Payment | `/fis:payment-integration` | `backend-extended.md` | Payment gateway |
-| 23 | Shopify | `/fis:shopify` | `backend-extended.md` | Shopify integration |
-| 24 | Shader | `/fis:shader` | `design-3d.md` | GLSL shader programming |
-| 25 | Three.js | `/fis:threejs` | `design-3d.md` | 3D web graphics |
-| 26 | Remotion | `/fis:remotion` | `design-3d.md` | Programmatic video |
-| 27 | Media | `/fis:media-processing` | `media-devtools.md` | Media processing |
-| 28 | Chrome DevTools | `/fis:chrome-devtools` | `media-devtools.md` | DevTools automation |
-| 29 | Worktree | `/fis:worktree` | `git-worktree.md` | Git worktree management |
+| 5 | Doubt | `/fis:doubt` | `doubt.md` | Phản biện plan/approach |
+| 6 | Backend Dev | `/fis:backend-development` | `backend-development.md` | FastAPI/Express backend |
+| 7 | Frontend Dev | `/fis:frontend-development` | `frontend-development.md` | React/Vue/Next.js |
+| 8 | Databases | `/fis:databases` | `databases.md` | Schema, migrations, queries |
+| 9 | ADR | `/fis:adr` | `adr.md` | Architecture Decision Records |
+| 10 | Codebase Analysis | `/fis:codebase-analysis` | `codebase-analysis.md` | Phân tích code |
+| 11 | Git Discipline | `/fis:git-discipline` | `git-discipline.md` | Git workflow |
+| 12 | Observe | `/fis:observe` | `observe.md` | Monitoring patterns |
+| 13 | Security Hardening | `/fis:security-hardening` | `security-hardening.md` | Security best practices |
+| 14 | Simplify | `/fis:simplify` | `simplify.md` | Code simplification |
+| 15 | Source Check | `/fis:source-check` | `source-check.md` | Verify sources |
 
-### 🧪 QA — Testing & Quality (8 skills)
+#### Standalone từ Bundle (Phase 1-4 mới tách)
+
+| # | Skill | Command | File | Mô tả |
+|---|-------|---------|------|--------|
+| 16 | Better Auth | `/fis:better-auth` | `better-auth.md` | Auth production-ready TypeScript |
+| 17 | Payment | `/fis:payment-integration` | `payment-integration.md` | SePay, Polar, Stripe, Paddle |
+| 18 | Shopify | `/fis:shopify` | `shopify.md` | Shopify apps, extensions, themes |
+| 19 | Frontend Design | `/fis:frontend-design` | `frontend-design.md` | Design system, pixel-perfect |
+| 20 | UI Styling | `/fis:ui-styling` | `ui-styling.md` | shadcn/ui, Tailwind, accessible |
+| 21 | UI/UX Pro Max | `/fis:ui-ux-pro-max` | `ui-ux-pro-max.md` | 50+ styles, 161 palettes |
+| 22 | React Best Practices | `/fis:react-best-practices` | `react-best-practices.md` | 45 rules Vercel Engineering |
+| 23 | Web Design Guidelines | `/fis:web-design-guidelines` | `web-design-guidelines.md` | WCAG, SEO, Core Web Vitals |
+| 24 | Design Doc | `/ckm:design` | `design-doc.md` | Brand identity |
+| 25 | Shader | `/fis:shader` | `shader.md` | GLSL fragment shader |
+| 26 | Three.js | `/fis:threejs` | `threejs.md` | 3D web graphics |
+| 27 | Remotion | `/fis:remotion` | `remotion.md` | Programmatic video React |
+| 28 | Media Processing | `/fis:media-processing` | `media-processing.md` | FFmpeg, ImageMagick, RMBG |
+| 29 | Chrome DevTools | `/fis:chrome-devtools` | `chrome-devtools.md` | Puppeteer automation |
+| 30 | Docs Seeker | `/fis:docs-seeker` | `docs-seeker.md` | Tra docs qua llms.txt |
+| 31 | LLMs | `/fis:llms` | `llms.md` | Sinh file llms.txt |
+| 32 | Excalidraw | `/excalidraw` | `excalidraw.md` | Whiteboard diagrams |
+| 33 | Mermaid.js | `/fis:mermaidjs-v11` | `mermaidjs-v11.md` | Diagram syntax |
+| 34 | Copywriting | `/fis:copywriting` | `copywriting.md` | Content marketing |
+| 35 | Graphify | `/fis:graphify` | `graphify.md` | Knowledge graph builder |
+| 36 | GKG | `/fis:gkg` | `gkg.md` | GitLab knowledge graph |
+| 37 | Repomix | `/fis:repomix` | `repomix.md` | Pack repo AI-friendly |
+| 38 | Brainstorm | `/fis:brainstorm` | `brainstorm.md` | Solution brainstorming |
+| 39 | Research | `/fis:research` | `research.md` | Technical research |
+| 40 | Cook | `/fis:cook` | `cook.md` | Structured implementation |
+| 41 | Loop | `/fis:loop` | `loop.md` | Auto-optimize loop |
+| 42 | Predict | `/fis:predict` | `predict.md` | Multi-persona debate |
+| 43 | Scenario | `/fis:scenario` | `scenario.md` | Edge case generation |
+| 44 | Sequential Thinking | `/fis:sequential-thinking` | `sequential-thinking.md` | Step-by-step analysis |
+| 45 | Stitch | `/fis:stitch` | `stitch.md` | AI design-to-code |
+| 46 | Show-off | `/fis:show-off` | `show-off.md` | Showcase page |
+| 47 | Xia | `/fis:xia` | `xia.md` | Cross-repo feature porting |
+| 48 | Web Frameworks | `/fis:web-frameworks` | `web-frameworks.md` | Next.js, Turborepo |
+| 49 | TanStack | `/fis:tanstack` | `tanstack.md` | TanStack Query/Router/Table |
+| 50 | Mobile Dev | `/fis:mobile-development` | `mobile-development.md` | React Native, Flutter |
+| 51 | Ship | `/fis:ship` | `ship.md` | Ship feature pipeline |
+| 52 | Bootstrap | `/fis:bootstrap` | `bootstrap.md` | Bootstrap new project |
+| 53 | Port Feature | `/fis:port-feature` | `port-feature.md` | Port feature |
+| 54 | Port Repo | `/fis:port-repo` | `port-repo.md` | Port repo |
+
+#### Skills mới (Phase 4)
+
+| # | Skill | Command | File | Mô tả |
+|---|-------|---------|------|--------|
+| 55 | Journal | `/fis:journal` | `journal.md` | Technical journal |
+| 56 | Watzup | `/fis:watzup` | `watzup.md` | Session review & wrap-up |
+| 57 | Project Organization | `/fis:project-organization` | `project-organization.md` | File/folder structure |
+| 58 | Retro | `/fis:retro` | `retro.md` | Sprint retrospective |
+| 59 | Mintlify | `/fis:mintlify` | `mintlify.md` | Docs site |
+| 60 | Kanban | `/fis:kanban` | `kanban.md` | Plans dashboard |
+| 61 | Plans Kanban | `/fis:plans-kanban` | `plans-kanban.md` | Plans CLI UI |
+| 62 | CTI Expert | `/fis:cti-expert` | `cti-expert.md` | Cyber threat intel / OSINT |
+
+### 🧪 QA — Testing & Quality (9 skills)
 
 | # | Skill | Command | File | Mô tả |
 |---|-------|---------|------|--------|
@@ -112,8 +159,9 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 | 4 | Mock Data | `/fis:tester mock-data` | `tester-mock-data.md` | Sinh test fixtures |
 | 5 | Bug Report | `/fis:tester bug` | `tester-bug.md` | Bug report formal |
 | 6 | Def of Ready | `/fis:tester def-of-ready` | `tester-def-of-ready.md` | Definition of Ready check |
-| 7 | Web Testing | `/fis:web-testing` | `testing-quality-extended.md` | Browser/E2E testing |
+| 7 | **Web Testing** | `/fis:web-testing` | `web-testing.md` | **Playwright, Vitest, k6** |
 | 8 | Three Amigos TestSpec | `/fis:three-amigos:review-testspec` | `three-amigos-review-testspec.md` | Sign-off TestSpec |
+| 9 | Testing Quality | `/fis:testing-quality` | `testing-quality-extended.md` | Testing standards |
 
 ### 🚀 DevOps — Infrastructure (6 skills)
 
@@ -143,36 +191,31 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 | 11 | Kanban | `/fis:kanban` | `kanban-mintlify.md` | Kanban board |
 | 12 | Mintlify | `/fis:mintlify` | `kanban-mintlify.md` | Docs site |
 
-### 🔄 Cross-Role (15 skills)
+### 🔄 Cross-Role (8 skills — standalone)
 
 | # | Skill | Command | File | Mô tả |
 |---|-------|---------|------|--------|
-| 1 | Docs | `/fis:docs` | `documentation-content.md` | Documentation management |
-| 2 | Preview | `/fis:preview` | `documentation-content.md` | Preview docs |
-| 3 | LLMs.txt | `/fis:llms` | `documentation-content.md` | LLM context docs |
-| 4 | Copywriting | `/fis:copywriting` | `documentation-content.md` | README/marketing copy |
-| 5 | Sequential Thinking | `/fis:sequential-thinking` | `analysis-reasoning.md` | Step-by-step reasoning |
-| 6 | Research | `/fis:research` | `analysis-reasoning.md` | Multi-source research |
-| 7 | Brainstorm | `/fis:brainstorm` | `analysis-reasoning.md` | Creative ideation |
-| 8 | Predict | `/fis:predict` | `analysis-reasoning.md` | Outcome prediction |
-| 9 | Excalidraw | `/excalidraw` | `documentation-content.md` | Whiteboard diagrams |
-| 10 | Mermaid | `/fis:mermaidjs-v` | `documentation-content.md` | Mermaid diagrams |
-| 11 | Graphify | `/fis:graphify` | `documentation-content.md` | Graph visualization |
+| 1 | Ask | `/fis:ask` | `ask.md` | Structured question asking |
+| 2 | Problem Solving | `/fis:problem-solving` | `problem-solving.md` | Structured problem solving |
+| 3 | Autoresearch | `/fis:autoresearch` | `autoresearch.md` | Automated research (→ `/fis:loop`) |
+| 4 | Docs | `/fis:docs` | `docs.md` | Documentation management |
+| 5 | Preview | `/fis:preview` | `preview.md` | Preview generated content |
+| 6 | Markdown Novel Viewer | `/fis:markdown-novel-viewer` | `markdown-novel-viewer.md` | Book-like reading |
 
-### 🤖 AI Tools (10 skills)
+### 🤖 AI Tools (10 skills — standalone)
 
 | # | Skill | Command | File | Mô tả |
 |---|-------|---------|------|--------|
-| 1 | Agent Browser | `/fis:agent-browser` | `ai-extended.md` | AI browser automation |
-| 2 | AI Artist | `/fis:ai-artist` | `ai-extended.md` | AI image generation |
-| 3 | Google ADK Python | `/fis:google-adk-python` | `ai-extended.md` | Google Agent Dev Kit |
-| 4 | MCP Builder | `/fis:mcp-builder` | `mcp-ai.md` | Build MCP servers |
-| 5 | MCP Management | `/fis:mcp-management` | `mcp-ai.md` | Manage MCP connections |
-| 6 | Use MCP | `/fis:use-mcp` | `mcp-ai.md` | Use MCP tools |
-| 7 | Agentize | `/fis:agentize` | `mcp-ai.md` | Convert to agent |
-| 8 | AI Multimodal | `/fis:ai-multimodal` | `mcp-ai.md` | Multimodal processing |
-| 9 | Context Engineering | `/fis:context-engineering` | `mcp-ai.md` | Context optimization |
-| 10 | Autoresearch | `/fis:autoresearch` | `mcp-ai.md` | Automated research |
+| 1 | Agent Browser | `/fis:agent-browser` | `agent-browser.md` | AI browser automation |
+| 2 | AI Artist | `/fis:ai-artist` | `ai-artist.md` | AI image generation |
+| 3 | AI Multimodal | `/fis:ai-multimodal` | `ai-multimodal.md` | Gemini API multimodal |
+| 4 | Google ADK Python | `/fis:google-adk-python` | `google-adk-python.md` | Google Agent Dev Kit |
+| 5 | Find Skills | `/fis:find-skills` | `find-skills.md` | Skill discovery |
+| 6 | MCP Builder | `/fis:mcp-builder` | `mcp-builder.md` | Build MCP servers |
+| 7 | MCP Management | `/fis:mcp-management` | `mcp-management.md` | Manage MCP configs |
+| 8 | Use MCP | `/fis:use-mcp` | `use-mcp.md` | Use MCP tools |
+| 9 | Team | `/fis:team` | `team.md` | Multi-agent coordination |
+| 10 | Context Engineering | `/fis:context-engineering` | `agent-browser.md` | Context optimization |
 
 ### 🏢 FIS Domain (8 skills)
 
@@ -187,17 +230,13 @@ Skills là **khả năng chuyên biệt** của AI agent, mỗi skill là 1 mark
 | 7 | Telco Self-Care | `/fis:telco-self-care` | `domain-knowhow.md` | Telecom self-service |
 | 8 | Utility Billing | `/fis:utility-billing` | `domain-knowhow.md` | Utility billing |
 
-### 🔧 Meta (7 skills)
+### 🔧 Meta (3 skills — standalone)
 
 | # | Skill | Command | File | Mô tả |
 |---|-------|---------|------|--------|
-| 1 | Skill Creator | `/fis:skill-creator` | `meta-utilities.md` | Create custom skills |
-| 2 | Find Skills | `/fis:find-skills` | `meta-utilities.md` | Search skills |
-| 3 | Help | `/fis:help` | `meta-utilities.md` | Kit help |
-| 4 | Team | `/fis:team` | `meta-utilities.md` | List agents |
-| 5 | Template Skill | `/fis:template-skill` | `meta-utilities.md` | Skill template |
-| 6 | Coding Level | `/fis:coding-level` | `meta-utilities.md` | Set output complexity |
-| 7 | Document Skills | `/fis:document-skills` | `meta-utilities.md` | Auto-doc skills |
+| 1 | Skill Creator | `/fis:skill-creator` | `skill-creator.md` | Create custom skills |
+| 2 | Template Skill | `/fis:template-skill` | `template-skill.md` | Skill template reference |
+| 3 | Coding Level | `/fis:coding-level` | `coding-level.md` | Set output complexity |
 
 ---
 
@@ -208,13 +247,13 @@ BA Phase:     /fis:elicit → /fis:ba create → /fis:wireframe → /fis:three-a
                                                                          ↓
 SA Phase:     /fis:sa design → /fis:sa ddd-tech → /fis:sa feature-spec → /fis:three-amigos:review-trd
                                                                          ↓
-DEV Phase:    /fis:plan → /fis:craft × N → /fis:test → /fis:code-review
+DEV Phase:    /fis:scout → /fis:plan → /fis:cook → /fis:craft × N → /fis:test → /fis:code-review
                                                                          ↓
-QA Phase:     /fis:tester test-spec → /fis:tester test-cases → /fis:test → /fis:tester bug
+QA Phase:     /fis:tester test-spec → /fis:tester test-cases → /fis:web-testing → /fis:tester bug
                                                                          ↓
 DevOps Phase: /fis:devops → /fis:deploy staging → /fis:deploy production
                                                                          ↓
-PM Phase:     /fis:pm status-report → /fis:pm lessons-learned → /fis:pm retro
+PM Phase:     /fis:pm status-report → /fis:retro → /fis:pm lessons-learned
 ```
 
 ## Tạo Skill mới
@@ -226,6 +265,8 @@ PM Phase:     /fis:pm status-report → /fis:pm lessons-learned → /fis:pm retr
 
 Mỗi skill file phải có:
 1. **Title** với slash command
-2. **Mục đích** + khi nào dùng
-3. **Prompt template** với ví dụ
-4. **Output** mong đợi
+2. **Khi nào dùng** + **Khi KHÔNG dùng**
+3. **Prompt mẫu** (2-5 examples)
+4. **Rationalizations** table
+5. **Red Flags** list
+6. **Verification** checklist
