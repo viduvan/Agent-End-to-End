@@ -1,7 +1,7 @@
 # SA Workflows (10 workflows)
 
 ## Workflow SA-1: Bắt đầu dự án mới ⭐
-**Skills**: `/fis:sa design`, `/fis:plan`, `/fis:craft`
+**Skills**: `/fis:sa design`, `/fis:plan`, `/fis:craft`, `/fis:excalidraw`
 
 ### SA trong New Project
 ```
@@ -38,7 +38,7 @@ C4 Container Diagram cho Agent-End-to-End:
 ---
 
 ## Workflow SA-2: Làm việc với dự án hiện có
-**Skills**: `/fis:scout`, `/fis:gkg`, `/fis:docs`
+**Skills**: `/fis:scout`, `/fis:gkg`, `/fis:graphify`, `/fis:docs`
 
 SA tasks:
 - `/fis:scout` → hiểu architecture tổng thể
