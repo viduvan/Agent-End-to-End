@@ -11,6 +11,9 @@
 | Project có package.json / requirements.txt / go.mod VÀ intent = add_feature / refactor | `/fis:source-check` | Trước `/fis:craft` |
 | Intent = auth / payment | `/fis:secure` | Trước `/fis:plan` |
 | Changes > 200 LOC VÀ intent ≠ mechanical (rename/format) | `/fis:doubt` | Sau `/fis:craft`, trước `/fis:code-review` |
+| Intent = deploy / ship | `/fis:security-scan` | Trước `/fis:deploy` |
+| Intent = agentize / MCP | `/fis:context-engineering` | Trước `/fis:agentize` |
+| Codebase > 500 files VÀ intent = research / scout | `/fis:repomix` | Trước `/fis:scout` |
 
 ## Framework Keywords (trigger source-check)
 React, Next.js, Vue, Angular, Svelte, Solid, Qwik,
