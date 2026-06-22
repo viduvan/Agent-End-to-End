@@ -102,5 +102,63 @@ User intent liên quan đến nghiệp vụ FIS?
   └── Telco self-care → /fis:telco-self-care
 ```
 
+### Exploration & Research
+```
+User intent liên quan đến nghiên cứu / khám phá?
+  ├── Knowledge graph từ code
+  │   └── /fis:graphify
+  ├── GitLab code analysis
+  │   └── /fis:gkg
+  ├── Pack repo cho AI
+  │   └── /fis:repomix
+  ├── Brainstorm giải pháp
+  │   └── /fis:brainstorm
+  ├── Nghiên cứu kỹ thuật
+  │   └── /fis:research
+  └── Tìm skill phù hợp
+      └── /fis:find-skills
+```
+
+### Implementation & Optimization
+```
+User intent liên quan đến triển khai / tối ưu?
+  ├── Full implementation (research → plan → implement → test → review)
+  │   └── /fis:cook
+  ├── Auto-optimize loop
+  │   └── /fis:loop
+  ├── 5 persona debate
+  │   └── /fis:predict
+  ├── Edge case generation (12 chiều)
+  │   └── /fis:scenario
+  └── Step-by-step analysis
+      └── /fis:sequential-thinking
+```
+
+### Documentation & Visualization
+```
+User intent liên quan đến docs / diagram?
+  ├── Tra docs qua llms.txt
+  │   └── /fis:docs-seeker
+  ├── Sinh llms.txt
+  │   └── /fis:llms
+  ├── Excalidraw diagrams
+  │   └── /fis:excalidraw
+  ├── Mermaid.js v11 diagrams
+  │   └── /fis:mermaidjs-v11
+  └── Copywriting (email, landing page)
+      └── /fis:copywriting
+```
+
+### Context & Agent Engineering
+```
+User intent liên quan đến AI context / agent?
+  ├── Context optimization
+  │   └── /fis:context-engineering
+  ├── Security scan (OWASP)
+  │   └── /fis:security-scan
+  └── CTI / OSINT
+      └── /fis:cti-expert
+```
+
 ## Fallback Rule
 Nếu không match domain nào → dùng `/fis:ask` để phân tích intent trước.
