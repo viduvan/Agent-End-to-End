@@ -7,13 +7,13 @@
 
 **Agent-End-to-End** là một hệ thống điều phối đa tác tử (Multi-Agent Orchestration Framework) được xây dựng trên nền tảng Claude Code. Nó mô phỏng một quy trình phát triển phần mềm chuẩn (SDLC) cho doanh nghiệp bằng cách thiết lập các luồng giao tiếp nghiêm ngặt giữa nhiều tác tử AI, mỗi tác tử đóng một vai trò (Persona) độc lập.
 
-## 🌟 Tính năng Cốt lõi
+## Tính năng Cốt lõi
 * **Master-Sub Agent Model**: 19 AI Personas chuyên biệt (Ví dụ: `Project Manager`, `Solution Architect`, `DEV`, `QA`, `DevOps`) giúp xử lý tác vụ chéo hiệu quả.
 * **Tự động hóa hoàn toàn luồng SDLC**: Vận hành dựa trên 16 End-to-end Workflows. Các luồng công việc sẽ tự động luân chuyển từ Khảo sát (Scout) -> Lập kế hoạch (Plan) -> Code (Craft) -> Test -> Review -> Triển khai (Ship).
 * **Node.js Pre-execution Hooks**: Can thiệp trực tiếp vào runtime của AI bằng các script chạy ngầm `.cjs`. Tính năng này ngăn chặn tình trạng tràn Context (Context Pollution), tự động nạp môi trường phát triển (Framework, Git branch) và giới hạn quyền đọc/ghi.
 * **Anti-hallucination Rules**: Bộ luật 10 quy tắc định tuyến tự động nhắc nhở AI tuân thủ Coding Standards, ép buộc Test Code và viết tài liệu một cách chuẩn xác, không bịa đặt.
 
-## 📂 Cấu trúc Repository
+## Cấu trúc Repository
 
 Hệ thống điều phối này hoạt động chủ yếu thông qua cấu hình `.claude` và các kịch bản mẫu (Kits).
 
@@ -33,7 +33,7 @@ Hệ thống điều phối này hoạt động chủ yếu thông qua cấu hì
 └── CLAUDE.md            # Default system instruction file
 ```
 
-## 🚀 Hướng dẫn Cài đặt & Sử dụng
+## Hướng dẫn Cài đặt & Sử dụng
 
 ### 1. Cài đặt Claude Code
 Dự án này yêu cầu cài đặt **Claude Code CLI** từ Anthropic. Đảm bảo bạn đã cài đặt Node.js (>=18).
@@ -58,7 +58,7 @@ Hãy bắt đầu làm quen với hệ thống bằng các lệnh Slash Command 
 - **Kiểm thử**: `/fis:test` (Bắt buộc chạy sau khi viết code)
 - **Đóng gói**: `/fis:ship`
 
-## 📖 Tài liệu Tham khảo (Documentation)
+## Tài liệu Tham khảo (Documentation)
 
 * Tham khảo file [README_SDLC.md](./README_SDLC.md) để đọc tài liệu về **Chi tiết Luồng 6 bước** và **6 Định hướng mở rộng mạnh mẽ** cho hệ thống này trong tương lai.
 * Tham khảo file [.claude/ARCHITECTURE.md](./.claude/ARCHITECTURE.md) để xem chi tiết kiến trúc điều phối bên trong bộ não Agent.
